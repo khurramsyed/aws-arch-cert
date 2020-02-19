@@ -8,7 +8,7 @@
 # How it works
 - Build your Data Catalog
 - Generate and Edit Transformations
-- Schedule and Run Your Jobs
+- Schedule and Run Your Jobs    
 
 
 ## Use Cases
