@@ -1,4 +1,30 @@
-## Question
+# VPC
+Amazon `Virtual Private Cloud (Amazon VPC)` lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.
+
+You have `complete control over your virtual networking environment`, including selection of your own `IP address range`, `creation of subnets`, and configuration of `route tables` and `network gateways`. You can use both IPv4 and IPv6 in your VPC for secure and easy access to resources and applications.
+
+### Route Table
+`Route Table` contains a set of rules called routes that are used to Determine where the network traffic is routed.
+
+
+
+- To Create a private subnet we need to create a route table that is not connected to internet gateway.
+- [Good Video on Subnets and how to make a subnet private/public](https://www.youtube.com/watch?v=KNT463WSjjY&t=49s)
+
+
+### Network ACL
+
+- [Network Access Control List - Good Video](https://www.youtube.com/watch?v=vJzHn24TNQE)
+- Works at **`SUBNET LEVEL`**.
+- `Lower Number Rule is executed First`, This means lower number order is executed first whatever it allows or denies takes precedence.
+- In bound and outbound rules are separately executed
+- In Default ACL everything is **`ALLOWED`**
+- However when you create `new  NACL` everything is **`DENIED`**
+- You specify in your `inbound rules` source `IPs or CIDR range` from where traffic is `ALLOWED to flow in`.
+- You specify in your `outbound rules` source `IPs or CIDR range` to where traffic is `ALLOWED to flow out`.
+
+##### Questions
+
 * Having just created a new VPC and launching an instance into its public subnet, you realise that you have forgotten to assign a public IP to the instance during creation. What is the simplest way to make your instance reachable from the outside world?*
  -
 
