@@ -3,8 +3,10 @@ What is public accessible in not default gateway
 
 
 What is one of the major advantages of having a VPN in AWS?
+[AWS VPN](https://aws.amazon.com/vpn/)
 
 Understand Route table
+https://docs.amazonaws.cn/en_us/vpc/latest/userguide/VPC_Route_Tables.html
 
 Load balancing read replica ??
 Read on SWF?
