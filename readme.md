@@ -1,8 +1,7 @@
 # AWS Certification Training
 Here is list of topics that we have covered for now.
 
-- [EC2](EC2Notes.md)
-- [HAArchitecture](HAArchitecture.md)
+
 - [DNS/Route53](Route53.md)
 - [VPC](VPCNotes.md)
 - [Athena - Query Your unstructured Data using ANSI SQL](amazonAthena.md)
@@ -10,7 +9,8 @@ Here is list of topics that we have covered for now.
 - [Monitoring AWS CloudWatch](CloudWatch.md)
 - [ETL Across AWS Data Stores - Using AWS Glue](AWSGlue.md)
 - [Kinesis - Streams and Firehose](Kinesis.md)
-- [Rout 53 - DNS](Route53.md)
+- [EC2](EC2Notes.md)
+- [HAArchitecture](HAArchitecture.md)
 
 ## To Revise
 - [Areas to Focus](problems.md)
