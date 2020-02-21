@@ -23,6 +23,16 @@ You have `complete control over your virtual networking environment`, including 
 - You specify in your `inbound rules` source `IPs or CIDR range` from where traffic is `ALLOWED to flow in`.
 - You specify in your `outbound rules` source `IPs or CIDR range` to where traffic is `ALLOWED to flow out`.
 
+
+### Security group
+- **`Controls the traffic`** for one or `more instances`
+- Changes to security groups are automatically applied instantly to all instance attached to that security group.
+- **`In case of security groups all the rules are evaluated`** and then decide what to do.
+- In the `default security group` all inbound and outboud traffic is **`ALLOWED`** Just like default NACL.
+- When you create a new `security group all inbound traffic is DENIED` just in like when you create new NACL. **However** all outbound traffic is allowed.
+- At security group level everything is DENIED, unless you specify ALLOW rule.
+- **`There are not DENY RULES AT SECURITY GROUP LEVEL only ALLOW RULES`** So I can only explicitly allow something  in security group rule
+
 ##### Questions
 
 * Having just created a new VPC and launching an instance into its public subnet, you realise that you have forgotten to assign a public IP to the instance during creation. What is the simplest way to make your instance reachable from the outside world?*

@@ -9,6 +9,10 @@
 
 
 
+| Kinesis Data Analytics     |
+| :------------- |
+| ![alt Kinesis Data Analytics](KinesisDataAnalytics.png)       |
+
 
 | Kinesis Video Stream     |
 | :------------- |
@@ -21,7 +25,3 @@
 | Kinesis Firehose      |
 | :------------- |
 | ![alt Kinesis Firehose](KinesisFireHose.png)       |
-
-| Kinesis Data Analytics     |
-| :------------- |
-| ![alt Kinesis Data Analytics](KinesisDataAnalytics.png)       |
