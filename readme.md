@@ -1,8 +1,11 @@
 # AWS Certification Training
 Here is list of topics that we have covered for now.
 
-
+- [Aurora](Aurora.md)
+- [AWSGlue](AWSGlue.md)
+- [CloudWatch](CloudWatch.md)
 - [DNS/Route53](Route53.md)
+- [Kinesis](Kinesis.md)
 - [VPC](VPCNotes.md)
 - [Athena - Query Your unstructured Data using ANSI SQL](amazonAthena.md)
 - [Simple Storage Service- S3](s3.md)
