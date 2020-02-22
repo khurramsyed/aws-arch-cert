@@ -39,9 +39,10 @@ Which of the following changes needs to be done?
 Burstable instances ???
 
 
+
 VPC v subnet vs AZ
 VPC public private subnet configurations
-Limit of instances
+Limit of instances per VPC /subnet
 What is automatically created with VPC
 Internet gateway, Route table
 
@@ -58,3 +59,20 @@ Loadbalancers configurations
 Benefits of Read Replicas
 EC2ThrottledException
 Lambda Configuration (Read and watch video)
+
+
+EBS drive Comparisons
+
+What will happen to you Elastic IP address if you stop and start the instance assocated with it?
+
+How can we read data from Glacier quickly (in minutes)?
+
+How to avoid Denial of Service Attacks ?
+
+Read Lambdas
+
+VPC peering
+EC2ThrottledException
+
+Can I usedb same ami to launchg in multiple az or regions
+# LOAD BALANCERS

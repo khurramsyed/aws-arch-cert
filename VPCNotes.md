@@ -52,3 +52,49 @@ In a VPC an instance does not retain its private IP address.
 
 
 0.0.0.0/0 would allow ANYONE from ANYWHERE to connect to your instances. This is generally a bad plan. The phrase 'web-facing subnets' does not mean just web servers. It would include any instances in that subnet some of which you may not strangers attacking. You would only allow 0.0.0.0/0 on port 80 or 443 to to connect to your public facing Web Servers, or preferably only to an ELB. Good security starts by limiting public access to only what the customer needs. *Please see the AWS Security whitepaper for complete details.*
+
+
+
+
+
+# VPN
+
+Amazon VPC offers you the flexibility to fully manage both sides of your Amazon VPC connectivity by creating a VPN connection between your remote network and a software VPN appliance running in your Amazon VPC network. This option is recommended if you must manage both ends of the VPN connection either for compliance purposes or for leveraging gateway devices that are not currently supported by Amazon VPC’s VPN solution.
+
+|![alt AWS VPN](aws-vpn.png)|
+|  :--------------|
+
+
+| Use this to Explain VPN and VPC    |
+| :------------- |
+| ![alt AWS VPN](aws-vpn-Exp.png)       |
+
+You can create an `IPsec VPN connection` between your `VPC` and your remote network. On the AWS side of the VPN connection, a virtual private gateway provides `two VPN endpoints (tunnels) for automatic failover`. You configure your `customer gateway on the remote side` of the VPN connection. If you have more than one remote network (for example, multiple branch offices), you can create multiple AWS managed VPN connections via your virtual private gateway to enable communication between these networks.
+
+With AWS Site-to-Site VPN, you can connect to an Amazon VPC in the cloud the same way you connect to your branches. AWS Site-to-Site VPN establishes secure and private sessions with IP Security (IPSec) and Transport Layer Security (TLS) tunnels.
+
+##### Important to Note
+
+ - A VPN connection actually goes through the public Internet, unlike the AWS Direct Connect connection which has a direct and dedicated connection to your on-premises network. So Actually VPN goes over internet over secure channel IPSec whereas direct connect is direct and dedicated.
+
+
+### Edge to Edge Peering
+
+Edge to Edge Routing Through a Gateway or Private Connection
+
+If either VPC in a peering relationship has one of the following connections, you cannot extend the peering relationship to that connection:
+
+
+| ![](edge-to-edge-vpn-diagram.png)     |
+| :------------- |
+| Edge to edge VPN peering is not allowed | 
+
+
+A VPN connection or an AWS Direct Connect connection to a corporate network
+An internet connection through an internet gateway
+An internet connection in a private subnet through a NAT device
+A VPC endpoint to an AWS service; for example, an endpoint to Amazon S3.
+(IPv6) A ClassicLink connection. You can enable IPv4 communication between a linked EC2-Classic instance and instances in a VPC on the other side of a VPC peering connection. However, IPv6 is not supported in EC2-Classic, so you cannot extend this connection for IPv6 communication.
+
+
+For example, if VPC A and VPC B are peered, and VPC A has any of these connections, then instances in VPC B cannot use the connection to access resources on the other side of the connection. Similarly, resources on the other side of a connection cannot use the connection to access VPC B.
