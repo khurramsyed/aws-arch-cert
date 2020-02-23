@@ -28,4 +28,17 @@ Here is list of topics that we have covered for now.
 - AWS Glue is a fully managed `extract, transform, and load (ETL)` service that makes it easy for customers to prepare and load their data for analytics.
 - AWS Glue natively supports data stored in `Amazon Aurora and all other Amazon RDS engines, Amazon Redshift, and Amazon S3, as well as common database engines and databases` in your Virtual Private Cloud (Amazon VPC) running on Amazon EC2.
 
-### Kinesis Streams v Firehose
+### TO READ/REVISE
+What functions can be performed on keys.
+How is DynamoDB performance and sacalibility provided.
+Which of the following are valid S3 data encryption options? [Select 4]
+S3 Disk Types and performance
+S3 Pricing
+S3 Srorage classes
+Structrue of Cloud Formantion Template
+WHich IP Address AWS reserves in a VPC
+Dynamo DB Partitioning
+When using EC2 instances with Dedicated Hosting, which of the following modes are you able to transition between by stopping the instance and starting it again?
+
+
+FileGateway

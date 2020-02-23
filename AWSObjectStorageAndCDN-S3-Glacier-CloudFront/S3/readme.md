@@ -33,14 +33,14 @@ S3 is
 
 #### S3 Basics
 
-	- S3 is object based stroage i.e it can store flat files.
-	- Objects are files of different format e.g. Videos ,photos ,pdf that are called flat files.
-	- S3 is place to store files.
-	- Whereas block based storage we talk about databases.
-	- S3 is unviversal names, i.e. bucket names must unique globally.(imp)
-		- when you create a bucket , a new DNS address is created.
-		- For example http://s3-eu-west-1.amazonaws.com/leanmentors ![alt text](https://github.com/khurramsyed/aws-training/blob/master/images/tip.jpeg "Important")
-	- When you upload a file to S3 you will receive a 200 Status code if it was successful (imp)
+- S3 is object based stroage i.e it can store flat files.
+- Objects are files of different format e.g. Videos ,photos ,pdf that are called flat files.
+- S3 is place to store files.
+- Whereas block based storage we talk about databases.
+- S3 is unviversal names, i.e. bucket names must unique globally.(imp)
+	- when you create a bucket , a new DNS address is created.
+	- For example http://s3-eu-west-1.amazonaws.com/leanmentors ![alt text](../../images/tip.jpeg "Important")
+- When you upload a file to S3 you will receive a 200 Status code if it was successful (imp)
 
 ---
 
@@ -68,16 +68,16 @@ but never corrupt/Intermediate data.
 
 ### S3 is simple Key Value Pair
 
-	- S3 is object based, Objects consist of following:
-		- Key (Name of the object) - File name
-		- Value : Data consisting sequence of bytes
-		- Version ID important for versioning (which version)
-		- Metadata (Data about data e.g. file upload date)
-		- Subresources exist underneath an object consits of:
-			- ACL (Access control list) -Fine grained Permissions
-				- Individual file level
-				- bucket level
-			- Torrent
+- S3 is object based, Objects consist of following:
+	- Key (Name of the object) - File name
+	- Value : Data consisting sequence of bytes
+	- Version ID important for versioning (which version)
+	- Metadata (Data about data e.g. file upload date)
+	- Subresources exist underneath an object consits of:
+		- ACL (Access control list) -Fine grained Permissions
+			- Individual file level
+			- bucket level
+		- Torrent
 
 ---
 
@@ -146,28 +146,46 @@ S3 Charges
 So My bucket location is in london , so if a user is uploading to bucket from Australia they can upload to Edge Location and
 
 >![alt text](../../images/tip.jpeg "Very Imporant")
-	- Object BAsed , no OS or Database (File, wor)
-	- File Size 0B to 5TB
-	- Files are stored in buckets
-	- S3 has universal namespace
-	- link for S3 follows pattern
-		- https://s3-region.amazonaws.com/bucketname
-		  for example
-		 https://s3-eu-west-1.amazonaws.com/leanmentors
-	- READ AFter Write consisetncy for PUTS of new Object
-	- Eventual consisetncy for PUTS and Delete (Can take sometime to propagate)
-	- Stroage Classes
-		- S3 - Durable, Frequently Accessed, Immediately available
-		- S3IA - Durable, Immediately Available, Infrequenct access , cheaper than above
-		- S3 RRS (For data that is by nature easily reproducible e.g. Thumbnails)
-		- Glacier - ARchival Data , waiting time 3-4 hours
-	- Key
-	- Value
-	- VersionId
-	- Meta Data
-	- Subresources
-		- Access Control List ACL
-		- Torrent
-	- Successful upload - Results in 200 hTTP Status
-	- Only Object based
-	- Must Read S3 FAQ before Exam.
+- Object BAsed , no OS or Database (File, wor)
+- File Size 0B to 5TB
+- Files are stored in buckets
+- S3 has universal namespaces
+- link for S3 follows pattern
+	- https://s3-region.amazonaws.com/bucketname
+	  for example
+	 https://s3-eu-west-1.amazonaws.com/leanmentors
+- READ AFter Write consisetncy for PUTS of new Object
+- Eventual consisetncy for PUTS and Delete (Can take sometime to propagate)
+- Stroage Classes
+	- S3 - Durable, Frequently Accessed, Immediately available
+	- S3IA - Durable, Immediately Available, Infrequenct access , cheaper than above
+	- S3 RRS (For data that is by nature easily reproducible e.g. Thumbnails)
+	- Glacier - ARchival Data , waiting time 3-4 hours
+- Key
+- Value
+- VersionId
+- Meta Data
+- Subresources
+	- Access Control List ACL
+	- Torrent
+- Successful upload - Results in 200 hTTP Status
+- Only Object based
+- Must Read S3 FAQ before Exam.
+
+
+# S3 FAQs
+**Q: What is a Provisioned Capacity Unit (PCU) and when should it use PCU?**
+
+Provisioned Capacity guarantees that your retrieval capacity for Expedited retrievals will be available when you need it. Each unit of capacity ensures that at least 3 expedited retrievals can be performed every 5 minutes and provides up to 150MB/s of retrieval throughput. Retrieval capacity can be provisioned if you have specific Expedited retrieval rate requirements that need to be met. Without provisioned capacity, Expedited retrieval requests will be accepted if capacity is available at the time the request is made. You can purchase provisioned capacity using the console, SDK, or the CLI. Each unit of provisioned capacity costs $100 per month from the date of purchase.
+
+
+## Availability
+**Q:  Where is my data stored?**
+
+You specify an AWS Region when you create your Amazon S3 bucket. For `S3 Standard, S3 Standard-IA, and S3 Glacier storage classes, your objects are automatically stored across multiple devices spanning a minimum of three Availability Zones, each separated by miles across an AWS Region`. Objects stored in the `S3 One Zone-IA storage class are stored redundantly within a single Availability Zone in the AWS Region you select`.
+
+
+
+
+
+- Q - Which of the following provide the lowest cost EBS options? [Select 2]
