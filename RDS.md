@@ -1,4 +1,4 @@
-# Amazon Aurora
+  # Amazon Aurora
 
 Amazon Aurora is a `MySQL and PostgreSQL-compatible` relational database built for the cloud, that combines the performance and availability of traditional enterprise databases with the `simplicity` and `cost-effectiveness` of open source databases.
 
