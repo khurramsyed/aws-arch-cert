@@ -1,3 +1,42 @@
+# EC2 (Elastic Cloud Compute)
+
+
+- Remember that an instance store-backed instance can only be `rebooted or terminated` and its data will be erased if the EC2 instance is terminated.
+-  If you stopped an EBS-backed EC2 instance, the volume is preserved but the data in any attached Instance store volumes will be erased.
+- Keep in mind that an EC2 instance has an underlying physical host computer. If the instance is stopped, AWS usually moves the instance to a new host computer. Your instance may stay on the same host computer if there are no problems with the host computer.In addition, its `Elastic IP address is disassociated` from the instance if it is an EC2-Classic instance. Otherwise, if it is an `EC2-VPC instance, the Elastic IP address remains associated`.
+
+-Take note that an EBS-backed EC2 instance can have attached Instance Store volumes.
+
+### Instance lifecycle
+![Instance Life Cycle](images/instance_lifecycle.png)
+
+### Which state C2 Instance will incur charges
+
+- Running
+  - If The instance is `running` and ready for use then it is `Billed`
+- Stopping
+  - If The instance is preparing to be stopped or stop-hibernated.
+    - `Not billed` if preparing to stop
+    - `Billed` if preparing to hibernate
+
+- All Other States
+  - `Not Changed`
+
+#### Note : RESERVED INSTANCE ARE STILL BILLED IF THEY ARE TERMINATED
+To Avoid being charged  
+- Go to the AWS Reserved Instance Marketplace and sell the Reserved instances.
+- Terminate the Reserved instances as soon as possible to avoid getting billed at the on-demand price when it expires
+
+
+|On Demand Instance Billing|
+| :-------------------------|
+![On Demand Instance Billing](images/instanceBilling.png)
+
+
+
+
+
+
 ## You cannot change the region of reserved instance.
 Depending on you type of RL you can You can modify the AZ, scope, network platform, or instance size (within the same instance type), but not Region. In some circumstances you can sell RIs, but only if you have a US bank account.
 
