@@ -28,12 +28,12 @@ To Avoid being charged
 - Terminate the Reserved instances as soon as possible to avoid getting billed at the on-demand price when it expires
 
 
-|On Demand Instance Billing|
+|On Demand Instance Billing |
 | :-------------------------|
 ![On Demand Instance Billing](images/instanceBilling.png)
 
 
-
+s
 
 
 
@@ -77,3 +77,10 @@ Depending on you type of RL you can You can modify the AZ, scope, network platfo
 - Amazon EC2 Auto Scaling waits until the health check `grace period` ends before checking the health status of the instance. Amazon EC2 status checks and Elastic Load Balancing health checks can complete before the health check grace period expires.
 - However, Amazon EC2 Auto Scaling does not act on them until the health check `grace period` expires. To provide ample `warm-up time` for your instances, ensure that the health check grace period covers the expected startup time for your application.
 - If you add a `lifecycle hook`, the grace period does not start until the lifecycle hook actions are completed and the instance enters the InService state.
+
+### Elastic IP Host and EC2 instances
+
+**When you stop an instance:**
+ - AWS usually moves the instance to a new host computer.
+ - Your instance may stay on the same host computer if there are no problems with the host computer.
+ - Its Elastic IP address is disassociated from the instance if it is an EC2-Classic instance. Otherwise, if it is an EC2-VPC instance, the Elastic IP address remains associated.

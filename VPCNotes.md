@@ -87,7 +87,7 @@ If either VPC in a peering relationship has one of the following connections, yo
 
 | ![](edge-to-edge-vpn-diagram.png)     |
 | :------------- |
-| Edge to edge VPN peering is not allowed | 
+| Edge to edge VPN peering is not allowed |
 
 
 A VPN connection or an AWS Direct Connect connection to a corporate network
