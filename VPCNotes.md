@@ -23,7 +23,14 @@ You have `complete control over your virtual networking environment`, including 
 - You specify in your `inbound rules` source `IPs or CIDR range` from where traffic is `ALLOWED to flow in`.
 - You specify in your `outbound rules` source `IPs or CIDR range` to where traffic is `ALLOWED to flow out`.
 
+To allow the custom port, you have to change the Inbound Rules in your Security Group to allow traffic coming from the mobile devices.
+>Security Groups usually control the list of ports that are allowed to be used by your EC2 instances and the NACLs control which network or list of IP addresses can connect to your whole VPC.
 
+>When you create a security group, it has no inbound rules. By default, a security group includes an outbound rule that allows all outbound traffic. You can remove the rule and add outbound rules that allow specific outbound traffic only. If your security group has no outbound rules, no outbound traffic originating from your instance is allowed.
+
+
+
+![alt NACL](images/nacl-example-diagram.png)
 ### Security group
 - **`Controls the traffic`** for one or `more instances`
 - Changes to security groups are automatically applied instantly to all instance attached to that security group.
@@ -69,9 +76,20 @@ Amazon VPC offers you the flexibility to fully manage both sides of your Amazon 
 | :------------- |
 | ![alt AWS VPN](aws-vpn-Exp.png)       |
 
-You can create an `IPsec VPN connection` between your `VPC` and your remote network. On the AWS side of the VPN connection, a virtual private gateway provides `two VPN endpoints (tunnels) for automatic failover`. You configure your `customer gateway on the remote side` of the VPN connection. If you have more than one remote network (for example, multiple branch offices), you can create multiple AWS managed VPN connections via your virtual private gateway to enable communication between these networks.
+You can create an `IPsec VPN connection` between your `VPC` and your remote network. On the AWS side of the VPN connection, a `virtual private gateway` provides `two VPN endpoints (tunnels) for automatic failover`. You configure your `customer gateway on the remote side` of the VPN connection. If you have more than one remote network (for example, multiple branch offices), you can create multiple AWS managed VPN connections via your `virtual private gateway` to enable communication between these networks.
 
 With AWS Site-to-Site VPN, you can connect to an Amazon VPC in the cloud the same way you connect to your branches. AWS Site-to-Site VPN establishes secure and private sessions with IP Security (IPSec) and Transport Layer Security (TLS) tunnels.
+
+By default, instances that you launch into a virtual private cloud (VPC) can't communicate with your own network. You can enable access to your network from your VPC by attaching a virtual private gateway to the VPC, creating a custom route table, updating your security group rules, and creating an AWS managed VPN connection.
+
+Although the term VPN connection is a general term, in the Amazon VPC documentation, a VPN connection refers to the `connection between your VPC and your own network`. AWS supports Internet Protocol security (IPsec) VPN connections.
+
+A `customer gateway` is a physical device or software application on your side of the VPN connection.
+
+>**To create a VPN connection**, you must create a customer gateway resource in AWS, which provides information to AWS about your customer gateway device. Next, you have to set up an Internet-routable IP address (static) of the customer gateway's external interface.
+
+The following diagram illustrates single VPN connections. The VPC has an attached virtual private gateway, and your remote network includes a customer gateway, which you must configure to enable the VPN connection. You set up the routing so that any traffic from the VPC bound for your network is routed to the virtual private gateway.
+
 
 ##### Important to Note
 
