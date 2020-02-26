@@ -15,3 +15,5 @@ You can monitor metrics for Lambda and view logs by using the Lambda console, th
 
 
 ![alt Lambda@Edge](../images/LambdaAtEdge.png)
+
+By using Lambda@Edge and Kinesis together, you can process real-time streaming data so that you can track and analyze globally-distributed user activity on your website and mobile applications, including clickstream analysis. 
