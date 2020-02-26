@@ -31,6 +31,10 @@ Here is list of topics that we have covered for now.
 - `S3 Select` Just to selectively load the data from S3.
 - `RedShift Spectrum` - Works on Redshift External tables/data stored in S3.
 
+### When to Use Which storage Type
+
+![alt ](images/StorageTypeSelection.png)
+
 ### Shared Responsibility Model
 
 Security and Compliance is a shared responsibility between AWS and the customer. This shared model can help relieve customer’s operational burden as AWS operates, manages and controls the components from the host operating system and virtualization layer down to the physical security of the facilities in which the service operates. The customer assumes responsibility and management of the guest operating system (including updates and security patches), other associated application software as well as the configuration of the AWS provided security group firewall.
@@ -44,7 +48,6 @@ The **`shared responsibility`** model for infrastructure services, such as Amazo
 - Network infrastructure
 - Virtualization infrastructure
 
-
 You as the customer are responsible for the security of the following assets:
 
 - Amazon Machine Images (AMIs)
@@ -56,25 +59,15 @@ You as the customer are responsible for the security of the following assets:
 - Credentials
 - Policies and configuration
 
-
 For a better understanding about this topic, refer to the AWS Security Best Practices [whitepaper](https://d0.awsstatic.com/whitepapers/aws-security-best-practices.pdf) on the reference link below and also the Shared Responsibility Model diagram:
 
 ![alt Shared Responsibility Model](images/Shared_Responsibility_Model.jpg)
-
 
 ### AWS Inspector Agent
 
 AWS Inspector Agent in each instance which will collect and push data to CloudWatch Logs periodically. AWS Inspector is simply a security assessments service which only helps you in checking for unintended network accessibility of your EC2 instances and for vulnerabilities on those EC2 instances.
 
-
 https://tutorialsdojo.com/aws-cheat-sheet-cloudwatch-agent-vs-ssm-agent-vs-custom-daemon-scripts/
-
-
-### When to Use Which storage Type
-
-![alt ](images/StorageTypeSelection.png)
-
-
 
 ### TO READ/REVISE
 What functions can be performed on keys.

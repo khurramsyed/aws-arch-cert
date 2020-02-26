@@ -7,7 +7,7 @@ Both the Oracle and SQL Server database engines have limits to how many database
 Amazon RDS Read Replicas provide `enhanced performance and durability` for database (DB) instances. This feature makes it easy to `elastically scale` out beyond the capacity constraints of a single DB instance for read-heavy database workloads.
 
 You can create one or more replicas of a given source DB Instance and serve high-volume application read traffic from multiple copies of your data, thereby increasing aggregate read throughput. Read replicas can also be promoted when needed to become standalone DB instances. Read replicas are available in Amazon RDS for MySQL, MariaDB, Oracle and PostgreSQL, as well as Amazon Aurora.
-
+  
 ### Multi-AZ v read Replicas
 
 ![alt](images/multi-az-v-readreplica.png)
