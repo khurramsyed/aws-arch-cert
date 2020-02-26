@@ -22,11 +22,14 @@ Here is list of topics that we have covered for now.
 
 
 # Comparisons
-### EMR V Athena V Glue
-- `Elastic Map Reduce (EMR)` is used for `processing and analyzing` data using the Hadoop framework. It is  **NOT** `used for transforming` streaming data.
+### EMR V Athena V Glue V Redshift Spectrum v S3 Select
+- `Elastic Map Reduce (EMR)` is used for `processing and analyzing` data using the Hadoop framework. It is  **NOT** `used for transforming` streaming data. `Quickly & cost-effectively process vast amounts` of data. It does **`NOT`** provide the ability to process your data in real-time, unlike Kinesis. Compute-optimized instances are ideal for compute-bound applications that benefit from high-performance processors but not for analyzing clickstream data from various websites in real-time.
+
 - `Amazon Athena` is an interactive query service that makes it easy to `analyze data in Amazon S3 using standard SQL`. Athena is serverless, so there is no infrastructure to manage, and you `pay only for the queries that you run`.
 - AWS Glue is a fully managed `extract, transform, and load (ETL)` service that makes it easy for customers to prepare and load their data for analytics.
 - AWS Glue natively supports data stored in `Amazon Aurora and all other Amazon RDS engines, Amazon Redshift, and Amazon S3, as well as common database engines and databases` in your Virtual Private Cloud (Amazon VPC) running on Amazon EC2.
+- `S3 Select` Just to selectively load the data from S3.
+- `RedShift Spectrum` - Works on Redshift External tables/data stored in S3.
 
 ### Shared Responsibility Model
 
@@ -34,7 +37,7 @@ Security and Compliance is a shared responsibility between AWS and the customer.
 
 Customers should carefully consider the services they choose as their responsibilities vary depending on the services used, the integration of those services into their IT environment, and applicable laws and regulations. The nature of this shared responsibility also provides the flexibility and customer control that permits the deployment. This differentiation of responsibility is commonly referred to as Security “of” the Cloud versus Security “in” the Cloud.
 
-The shared responsibility model for infrastructure services, such as Amazon Elastic Compute Cloud (Amazon EC2) for example, specifies that AWS manages the security of the following assets:
+The **`shared responsibility`** model for infrastructure services, such as Amazon Elastic Compute Cloud (Amazon EC2) for example, specifies that AWS manages the security of the following assets:
 
 - Facilities
 - Physical security of hardware
@@ -49,7 +52,7 @@ You as the customer are responsible for the security of the following assets:
 - Applications
 - Data in transit
 - Data at rest
-- Data stores
+- Data stores   
 - Credentials
 - Policies and configuration
 
@@ -57,6 +60,15 @@ You as the customer are responsible for the security of the following assets:
 For a better understanding about this topic, refer to the AWS Security Best Practices [whitepaper](https://d0.awsstatic.com/whitepapers/aws-security-best-practices.pdf) on the reference link below and also the Shared Responsibility Model diagram:
 
 ![alt Shared Responsibility Model](images/Shared_Responsibility_Model.jpg)
+
+
+### AWS Inspector Agent
+
+AWS Inspector Agent in each instance which will collect and push data to CloudWatch Logs periodically. AWS Inspector is simply a security assessments service which only helps you in checking for unintended network accessibility of your EC2 instances and for vulnerabilities on those EC2 instances.
+
+
+https://tutorialsdojo.com/aws-cheat-sheet-cloudwatch-agent-vs-ssm-agent-vs-custom-daemon-scripts/
+
 
 
 

@@ -83,4 +83,14 @@ User --> Route53 --> AWS --> VPC --> ELB --> Auto Scale Group --|
 -- Configure EC2
   Backup to S3
   Ec2 instance behind LB
-  Update Route53 to 
+  Update Route53 to
+
+
+## DR Scenarios
+
+### Pilot Light
+The term pilot light is often used to describe a DR scenario in which a minimal version of an environment is always running in the cloud. The idea of the pilot light is an analogy that comes from the gas heater. In a gas heater, a small flame that’s always on can quickly ignite the entire furnace to heat up a house. This scenario is similar to a backup-and-restore scenario.
+
+For example, with AWS you can maintain a pilot light by configuring and running the most critical core elements of your system in AWS. When the time comes for recovery, you can rapidly provision a full-scale production environment around the critical core.
+
+![alt p](images/PilotLight.jpg)

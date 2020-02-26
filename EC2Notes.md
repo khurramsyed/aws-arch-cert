@@ -40,7 +40,13 @@ s
 ## You cannot change the region of reserved instance.
 Depending on you type of RL you can You can modify the AZ, scope, network platform, or instance size (within the same instance type), but not Region. In some circumstances you can sell RIs, but only if you have a US bank account.
 
+### Logging in EC2
+To collect logs from your Amazon EC2 instances and on-premises servers into CloudWatch Logs, AWS offers both a `new unified CloudWatch agent`, and an `older CloudWatch Logs agent`. It is recommended to use the unified CloudWatch agent which has the following advantages:
 
+>- You can collect both logs and advanced metrics with the installation and configuration of just one agent.
+- The unified agent enables the collection of logs from servers running Windows Server.
+- If you are using the agent to collect CloudWatch metrics, the unified agent also enables the collection of additional system metrics, for in-guest visibility.
+- The unified agent provides better performance.
 
 
 

@@ -35,7 +35,7 @@ When you create an EBS volume in an Availability Zone, **it is automatically rep
 
 ### Taking Backup of EBS Volumes Steps:
 
-Remember that since the instance is using a RAID configuration, the snapshot process is different. You should stop all I/O activity of the volumes before creating a snapshot.
+Remember that since the instance is using a RAID configuration, the snapshot process is different. You should stop all I/O activity of the volumes before creating a snapshot.  
 
 - Stop all applications from writing to the RAID array.
 - Flush all caches to the disk.
@@ -46,3 +46,13 @@ Remember that since the instance is using a RAID configuration, the snapshot pro
 When you take a snapshot of an attached Amazon EBS volume that is in use, the snapshot excludes data cached by applications or the operating system. For a single EBS volume, this is often not a problem. However, when cached data is excluded from snapshots of multiple EBS volumes in a RAID array, restoring the volumes from the snapshots can degrade the integrity of the array.
 
 When creating snapshots of EBS volumes that are configured in a RAID array, it is critical that there is no data I/O to or from the volumes when the snapshots are created. RAID arrays introduce data interdependencies and a level of complexity not present in a single EBS volume configuration.
+
+
+### Health Checks
+
+Volume status checks are automated tests that run every 5 minutes and return a pass or fail status. You can view the results of volume status checks to identify any impaired volumes and take any necessary actions.
+
+- If all checks pass, the status of the volume is `ok`.  
+- If a check fails, the status of the volume is `impaired`.
+- If the volume is severely degraded or the volume performance is well below expectations, then the status is `warning`.
+- If the status is `insufficient-data`, the checks may still be in progress on the volume.
