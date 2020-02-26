@@ -8,6 +8,10 @@ Amazon RDS Read Replicas provide `enhanced performance and durability` for datab
 
 You can create one or more replicas of a given source DB Instance and serve high-volume application read traffic from multiple copies of your data, thereby increasing aggregate read throughput. Read replicas can also be promoted when needed to become standalone DB instances. Read replicas are available in Amazon RDS for MySQL, MariaDB, Oracle and PostgreSQL, as well as Amazon Aurora.
 
+### Multi-AZ v read Replicas
+
+![alt](images/multi-az-v-readreplica.png)
+
 ## Amazon Aurora
 
 Amazon Aurora is a `MySQL and PostgreSQL-compatible` relational database built for the cloud, that combines the performance and availability of traditional enterprise databases with the `simplicity` and `cost-effectiveness` of open source databases.

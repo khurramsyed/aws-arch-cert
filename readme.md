@@ -70,6 +70,10 @@ AWS Inspector Agent in each instance which will collect and push data to CloudWa
 https://tutorialsdojo.com/aws-cheat-sheet-cloudwatch-agent-vs-ssm-agent-vs-custom-daemon-scripts/
 
 
+### When to Use Which storage Type
+
+![alt ](images/StorageTypeSelection.png)
+
 
 
 ### TO READ/REVISE
