@@ -14,7 +14,7 @@
 - If you stopped an `EBS-backed EC2 instance`, the volume is preserved but the `data in any attached Instance store` volumes will be erased. (Implies that EBS-Backed instance can have instance store volumes attached it.)
 
 
-### Backups   
+### Backups     
 - One way to take EBS backups is Snapshots (incremental and complete)
 ##### Automating EBS Backups
 You can use **`Amazon Data Lifecycle Manager (Amazon DLM)`** to automate the creation, retention, and deletion of snapshots taken to back up your Amazon EBS volumes. Automating snapshot management helps you to:

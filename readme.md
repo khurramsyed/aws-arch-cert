@@ -33,7 +33,7 @@ Here is list of topics that we have covered for now.
 
 ### When to Use Which storage Type
 
-![alt ](images/StorageTypeSelection.png)
+![alt ](images/StorageTypeSelection.png)    
 
 ### Shared Responsibility Model
 
@@ -69,6 +69,18 @@ AWS Inspector Agent in each instance which will collect and push data to CloudWa
 
 https://tutorialsdojo.com/aws-cheat-sheet-cloudwatch-agent-vs-ssm-agent-vs-custom-daemon-scripts/
 
+
+
+### SAML Compatiblity
+
+If your identity store is not compatible with SAML 2.0, then you can build a custom identity broker application to perform a similar function. The broker application authenticates users, requests temporary credentials for users from AWS, and then provides them to the user to access AWS resources.
+
+The application verifies that employees are signed into the existing corporate network's identity and authentication system, which might use LDAP, Active Directory, or another system. The identity broker application then obtains temporary security credentials for the employees.
+
+To get temporary security credentials, the identity broker application calls either AssumeRole or GetFederationToken to obtain temporary security credentials, depending on how you want to manage the policies for users and when the temporary credentials should expire. The call returns temporary security credentials consisting of an AWS access key ID, a secret access key, and a session token. The identity broker application makes these temporary security credentials available to the internal company application. The app can then use the temporary credentials to make calls to AWS directly. The app caches the credentials until they expire, and then requests a new set of temporary credentials.
+
+![alt ](images/identity_auth_Non_Saml.diagram.png)
+
 ### TO READ/REVISE
 What functions can be performed on keys.
 How is DynamoDB performance and sacalibility provided.
@@ -87,6 +99,10 @@ shared responsibility model
 Bastion Host Where should it be installed (I think public subnets )
 Read Load Balancers which ones will be cross region/cross az
 DNS Record types
+ENhanced RDS monitoring
+ Lambda function is storing sensitive database and API credentials,
+ Which Amazon Services are fully managed
+ Red Shift Query Queues
 
 
 FileGateway

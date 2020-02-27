@@ -90,3 +90,19 @@ To collect logs from your Amazon EC2 instances and on-premises servers into Clou
  - AWS usually moves the instance to a new host computer.
  - Your instance may stay on the same host computer if there are no problems with the host computer.
  - Its Elastic IP address is disassociated from the instance if it is an EC2-Classic instance. Otherwise, if it is an EC2-VPC instance, the Elastic IP address remains associated.
+
+
+### Data Transfer within the same AWS Region
+
+**Across AZ in same Region charged at 0.01/GB** Data transferred "in" to and "out" from `Amazon EC2, Amazon RDS, Amazon Redshift , Amazon DynamoDB Accelerator (DAX), and Amazon ElastiCache instances or Elastic Network Interfaces across Availability Zones or VPC Peering connections` in the same AWS Region is charged at $0.01/GB in each direction.
+
+IPv4: Data transferred “in” to and “out” from public or Elastic IPv4 address is charged at $0.01/GB in each direction.
+IPv6: Data transferred “in” to and “out” from an IPv6 address in a different VPC is charged at $0.01/GB in each direction.
+
+**EC2 Same AZ Data Transfer Free**
+
+>Data transferred between `Amazon EC2, Amazon RDS, Amazon Redshift, Amazon ElastiCache instances and Elastic Network Interfaces in the same Availability Zone is free`. See above when transferring data using VPC peering.
+
+>Data transferred between Amazon S3, `Amazon Glacier, Amazon DynamoDB, Amazon SES, Amazon SQS, Amazon Kinesis, Amazon ECR, Amazon SNS or Amazon SimpleDB and Amazon EC2 instances in the same AWS Region is free`. AWS Services accessed via PrivateLink endpoints will incur standard PrivateLink charges as explained here.**
+
+>Data transferred "in" to and "out" from `Amazon Classic and Application Elastic Load Balancers using private IP addresses, between EC2 instances and the load balancer in the same AWS Region is free.`
