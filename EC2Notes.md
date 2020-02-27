@@ -99,10 +99,23 @@ To collect logs from your Amazon EC2 instances and on-premises servers into Clou
 IPv4: Data transferred “in” to and “out” from public or Elastic IPv4 address is charged at $0.01/GB in each direction.
 IPv6: Data transferred “in” to and “out” from an IPv6 address in a different VPC is charged at $0.01/GB in each direction.
 
-**EC2 Same AZ Data Transfer Free**
+**EC2 Data Transfer within same AZ s  Free**
 
 >Data transferred between `Amazon EC2, Amazon RDS, Amazon Redshift, Amazon ElastiCache instances and Elastic Network Interfaces in the same Availability Zone is free`. See above when transferring data using VPC peering.
 
 >Data transferred between Amazon S3, `Amazon Glacier, Amazon DynamoDB, Amazon SES, Amazon SQS, Amazon Kinesis, Amazon ECR, Amazon SNS or Amazon SimpleDB and Amazon EC2 instances in the same AWS Region is free`. AWS Services accessed via PrivateLink endpoints will incur standard PrivateLink charges as explained here.**
 
 >Data transferred "in" to and "out" from `Amazon Classic and Application Elastic Load Balancers using private IP addresses, between EC2 instances and the load balancer in the same AWS Region is free.`
+
+
+
+### Increase the performance of Database on EC2 Instance
+To increase the write performance of the database hosted in an EC2 instance. **You can achieve this by either setting up a standard RAID 0 configuration or simply by increasing the size of the EC2 instance.**
+
+Some EC2 instance types can drive more I/O throughput than what you can provision for a single EBS volume. **`You can join multiple gp2, io1, st1, or sc1 volumes together in a RAID 0 configuration to use the available bandwidth for these instances.`**
+
+![alt](images/ebs_backed_instance.png)
+
+With Amazon EBS, you can use any of the standard RAID configurations that you can use with a traditional bare metal server, as long as that particular RAID configuration is supported by the operating system for your instance. This is because all RAID is accomplished at the software level. For greater I/O performance than you can achieve with a single volume, RAID 0 can stripe multiple volumes together; for on-instance redundancy, RAID 1 can mirror two volumes together.
+
+**Take note that HVM AMIs are required to take advantage of enhanced networking and GPU processing**. In order to pass through instructions to specialized network and GPU devices, the OS needs to be able to have access to the native hardware platform which the HVM virtualization provides.
