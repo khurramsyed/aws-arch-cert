@@ -104,5 +104,15 @@ ENhanced RDS monitoring
  Which Amazon Services are fully managed
  Red Shift Query Queues
 
+https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingEncryption.html
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-public-data-sets.html
+
+
+https://aws.amazon.com/about-aws/whats-new/2018/11/amazon-cloudfront-announces-support-for-origin-failover/
+
+
 
 FileGateway

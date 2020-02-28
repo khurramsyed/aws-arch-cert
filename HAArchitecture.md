@@ -114,3 +114,43 @@ The term pilot light is often used to describe a DR scenario in which a minimal 
 For example, with AWS you can maintain a pilot light by configuring and running the most critical core elements of your system in AWS. When the time comes for recovery, you can rapidly provision a full-scale production environment around the critical core.
 
 ![alt p](images/PilotLight.jpg)
+
+
+### Autoscaling, Loadbalancers and Health checks
+n this scenario, the load balancer will route the incoming requests only to the healthy instances. When the load balancer determines that an instance is unhealthy, it stops routing requests to that instance. The load balancer resumes routing requests to the instance when it has been restored to a healthy state.
+
+There are two ways of checking the status of your EC2 instances:
+
+1. Via the Auto Scaling group
+2. Via the ELB health checks
+
+
+
+The default health checks for an Auto Scaling group are EC2 status checks only. If an instance fails these status checks, the Auto Scaling group considers the instance unhealthy and replaces. If you attached one or more load balancers or target groups to your Auto Scaling group, the group does not, by default, consider an instance unhealthy and replace it if it fails the load balancer health checks.
+
+However, you can optionally configure the Auto Scaling group to use Elastic Load Balancing health checks. This ensures that the group can determine an instance's health based on additional tests provided by the load balancer. The load balancer periodically sends pings, attempts connections, or sends requests to test the EC2 instances. These tests are called health checks.
+
+>If you configure the Auto Scaling group to use Elastic Load Balancing health checks, it considers the instance unhealthy if it fails either the EC2 status checks or the load balancer health checks. If you attach multiple load balancers to an Auto Scaling group, all of them must report that the instance is healthy in order for it to consider the instance healthy. If one load balancer reports an instance as unhealthy, the Auto Scaling group replaces the instance, even if other load balancers report it as healthy
+
+![alt](images/asgs-and-healthchecks.png)
+
+
+References:
+
+https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-healthchecks.html
+
+https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-add-elb-healthcheck.html
+
+
+Check out this AWS Elastic Load Balancing (ELB) Cheat Sheet:
+
+https://tutorialsdojo.com/aws-cheat-sheet-aws-elastic-load-balancing-elb/
+
+EC2 Instance Health Check vs ELB Health Check vs Auto Scaling and Custom Health Check:
+
+https://tutorialsdojo.com/aws-cheat-sheet-ec2-instance-health-check-vs-elb-health-check-vs-auto-scaling-and-custom-health-check-2/
+
+
+Here is an additional training material on why an Amazon EC2 Auto Scaling group terminates a healthy instance:
+
+https://youtu.be/_ew-J3DQKZg

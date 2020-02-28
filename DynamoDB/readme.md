@@ -21,3 +21,7 @@ If you enable **`DynamoDB Streams`** on a table, you can associate the stream AR
 ![alt DynamoDBStreamsAndTriggers](../images/DynamoDBStreamsAndTriggers.png)
 
 You can create a Lambda function which can perform a specific action that you specify, such as sending a notification or initiating a workflow. For instance, you can set up a Lambda function to simply copy each stream record to persistent storage, such as EFS or S3, to create a permanent audit trail of write activity in your table.
+
+
+### Choosing Right Cardinality of MongoDB
+https://aws.amazon.com/blogs/database/choosing-the-right-dynamodb-partition-key/

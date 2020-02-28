@@ -192,25 +192,37 @@ Using **Virtual Device** Use your existing smartphone or tablet running any appl
 
 
 ---
+### Centrally Managing AWS Accounts
+
+AWS Resource Access Manager (RAM) is a service that enables you to easily and securely share AWS resources with any AWS account or within your AWS Organization. You can share AWS Transit Gateways, Subnets, AWS License Manager configurations, and Amazon Route 53 Resolver rules resources with RAM.
+
+Many organizations use multiple accounts to create administrative or billing isolation, and limit the impact of errors. RAM eliminates the need to create duplicate resources in multiple accounts, reducing the operational overhead of managing those resources in every single account you own. You can create resources centrally in a multi-account environment, and use RAM to share those resources across accounts in three simple steps: create a Resource Share, specify resources, and specify accounts. RAM is available to you at no additional charge.
+
+![alt](../images/aws-ram.png)
+
+You can procure AWS resources centrally, and use RAM to share resources such as subnets or License Manager configurations with other accounts. This eliminates the need to provision duplicate resources in every account in a multi-account environment, reducing the operational overhead of managing those resources in every account.
+
+AWS Organizations is an account management service that lets you consolidate multiple AWS accounts into an organization that you create and centrally manage. With Organizations, you can create member accounts and invite existing accounts to join your organization. You can organize those accounts into groups and attach policy-based controls.
+---
 
 **Summary**
 
- 	- IAM is `universal` and deos not apply to regions
-	- Root account is simply account created when you create AWS
-	  account
-	- New users chave no permissions when created
-	- New users have access key Id and Secrect access keys, you
-	  can access aws using access key ID and Secret access keys
-	  using `programtic means` e.g.  command line, APIs/Scrips
-	  however not using console.
-    - accessKey ID and Secret access Key are only visible once,
-      so if you loose them you will need to regenerate them ,
-      so when you get them save them in a safe location
-    - Always setup muti-factor auth for root account
-    - Set up passowrd policy (including password rotation policy)
-    - User Access allows  Access to all AWS services ,except for
-      management of groups and users within IAM.
-    - root access is same as administrator access
+- IAM is `universal` and deos not apply to regions
+- Root account is simply account created when you create AWS
+  account
+- New users chave no permissions when created
+- New users have access key Id and Secrect access keys, you
+  can access aws using access key ID and Secret access keys
+  using `programtic means` e.g.  command line, APIs/Scrips
+  however not using console.
+  - accessKey ID and Secret access Key are only visible once,
+    so if you loose them you will need to regenerate them ,
+    so when you get them save them in a safe location
+  - Always setup muti-factor auth for root account
+  - Set up passowrd policy (including password rotation policy)
+  - User Access allows  Access to all AWS services ,except for
+    management of groups and users within IAM.
+  - root access is same as administrator access
 
 ---
 

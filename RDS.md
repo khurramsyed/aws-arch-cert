@@ -7,7 +7,7 @@ Both the Oracle and SQL Server database engines have limits to how many database
 Amazon RDS Read Replicas provide `enhanced performance and durability` for database (DB) instances. This feature makes it easy to `elastically scale` out beyond the capacity constraints of a single DB instance for read-heavy database workloads.
 
 You can create one or more replicas of a given source DB Instance and serve high-volume application read traffic from multiple copies of your data, thereby increasing aggregate read throughput. Read replicas can also be promoted when needed to become standalone DB instances. Read replicas are available in Amazon RDS for MySQL, MariaDB, Oracle and PostgreSQL, as well as Amazon Aurora.
-  
+
 ### Multi-AZ v read Replicas
 
 ![alt](images/multi-az-v-readreplica.png)
@@ -59,6 +59,22 @@ A reader endpoint for an Aurora DB cluster provides load-balancing support for r
 If the cluster contains one or more Aurora Replicas, the reader endpoint load-balances each connection request among the Aurora Replicas. In that case, you can only perform read-only statements such as SELECT in that session. If the cluster only contains a primary instance and no Aurora Replicas, the reader endpoint connects to the primary instance. In that case, you can perform write operations through the endpoint.
 
 Hence, the correct answer is to use the built-in Reader endpoint of the Amazon Aurora database.
+
+### IAM database Authentication
+
+IAM database authentication provides the following benefits:
+
+1. Network traffic to and from the database is encrypted using Secure Sockets Layer (SSL).
+2. You can use IAM to centrally manage access to your database resources, instead of managing access individually on each DB instance.
+3. For applications running on Amazon EC2, you can use profile credentials specific to your EC2 instance to access your database instead of a password, for greater security
+
+![alt](images/iam-db-auth.png )
+
+
+
+### Monitoring RDS
+CloudWatch gathers metrics about `CPU utilization from the hypervisor for a DB instance`, and `Enhanced Monitoring gathers its metrics from an agent on the instance`. As a result, you might find differences between the measurements, because the hypervisor layer performs a small amount of work. Hence, enabling Enhanced Monitoring in RDS is the correct answer in this specific scenario.
+
 
 ### Aurora `Cluster Endpoints` (For connecting to cluster **`NOT for`** Load Balancing)
 

@@ -19,3 +19,30 @@ Amazon CloudWatch is a `monitoring and observability` service built for `DevOps 
 - Default monitoring period is 5 minutes, but you can change it to 1 Minute.
 - Can also create cloud watch alarms which trigger notifications and we did that when we created a billing.
 -
+
+
+### EC2 Metrics
+Ec2 Metrics available in CloudWatch
+- CPUUtilization
+- DiskReadOps
+- DiskReadOps
+- DiskReadBytes
+- DiskReadBytes
+- NetworkIn
+- NetworkOut
+- NetworkPacketsIn
+- NetworkPacketsOut
+
+
+CloudWatch has available Amazon EC2 Metrics for you to use for monitoring CPU utilization, Network utilization, Disk performance, and Disk Reads/Writes.
+
+
+In case that you need to monitor the below items, you need to prepare a custom metric using a Perl or other shell script, as there are no ready to use metrics for these:
+
+- Memory utilization
+- disk swap utilization
+- disk space utilization
+- page file utilization
+- log collection
+
+`Take note that there is a multi-platform CloudWatch agent which can be installed on both Linux and Windows-based instances. You can use a single agent to collect both system metrics and log files from Amazon EC2 instances and on-premises servers.` This agent supports both Windows Server and Linux and enables you to select the metrics to be collected, including sub-resource metrics such as per-CPU core. It is recommended that you use the new agent instead of the older monitoring scripts to collect metrics and logs.

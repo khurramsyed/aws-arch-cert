@@ -16,4 +16,14 @@ You can monitor metrics for Lambda and view logs by using the Lambda console, th
 
 ![alt Lambda@Edge](../images/LambdaAtEdge.png)
 
-By using Lambda@Edge and Kinesis together, you can process real-time streaming data so that you can track and analyze globally-distributed user activity on your website and mobile applications, including clickstream analysis. 
+By using Lambda@Edge and Kinesis together, you can process real-time streaming data so that you can track and analyze globally-distributed user activity on your website and mobile applications, including clickstream analysis.
+
+
+
+### Encrypting Environment Variables on Lambda
+
+When you create or update Lambda functions that use environment variables, `AWS Lambda encrypts them using the AWS Key Management Service`. When your Lambda function is invoked, those values are decrypted and made available to the Lambda code.
+
+> The first time you create or update Lambda functions that use environment variables in a region, a default service key is created for you automatically within AWS KMS. This key is used to encrypt environment variables. However, `if you wish to use encryption helpers and use KMS to encrypt environment variables after your Lambda function is created, you must create your own AWS KMS key and choose it instead of the default key. The default key will give errors when chosen. Creating your own key gives you more flexibility, including the ability to create, rotate, disable, and define access controls, and to audit the encryption keys used to protect your data.`
+
+![alt](../images/aws-lambda-env-encryption.png)

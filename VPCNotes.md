@@ -128,3 +128,33 @@ The first four IP addresses and the last IP address in each subnet CIDR block ar
 - `10.0.0.2`: Reserved by AWS. The IP address of the DNS server is the base of the VPC network range plus two. For VPCs with multiple CIDR blocks, the IP address of the DNS server is located in the primary CIDR. We also reserve the base of each subnet range plus two for all CIDR blocks in the VPC. For more information, see Amazon DNS Server.
 - `10.0.0.3`: Reserved by AWS for future use.
 - `10.0.0.255`: Network broadcast address. We do not support broadcast in a VPC, therefore we reserve this address.
+
+
+
+### Keeping the `On Premises` IP Address range
+You can bring part or all of your public IPv4 address range from your on-premises network to your AWS account. You continue to own the address range, but AWS advertises it on the Internet. After you bring the address range to AWS, it appears in your account as an address pool. You can create an Elastic IP address from your address pool and use it with your AWS resources, such as EC2 instances, NAT gateways, and Network Load Balancers. This is also called **`"Bring Your Own IP Addresses (BYOIP)"`**.
+
+To ensure that only you can bring your address range to your AWS account, you must authorize Amazon to advertise the address range and provide proof that you own the address range.
+
+**A Route Origin Authorization (ROA)** is a document that you can create through your Regional internet registry (RIR), such as the American Registry for Internet Numbers (ARIN) or Réseaux IP Européens Network Coordination Centre (RIPE). `It contains the address range, the ASNs that are allowed to advertise the address range, and an expiration date.`
+
+>The ROA authorizes Amazon to advertise an address range under a specific AS number. However, it does not authorize your AWS account to bring the address range to AWS. To authorize your AWS account to bring an address range to AWS, you must publish a self-signed X509 certificate in the RDAP remarks for the address range. The certificate contains a public key, which AWS uses to verify the authorization-context signature that you provide. You should keep your private key secure and use it to sign the authorization-context message.
+
+
+### Calculating available addresses in CIDR Range
+
+To calculate the total number of IP addresses of a given CIDR Block, you simply need to follow the 2 easy steps below. Let's say you have a CIDR block /27:
+
+1. Subtract 32 with the mask number :
+
+(32 - 27) = **5**
+
+2. Raise the number 2 to the power of the answer in Step #1 :
+
+**2^ 5** = (2 * 2 * 2 * 2 * 2) = 32
+
+The answer to Step #2 is the total number of IP addresses available in the given CIDR netmask. Don't forget that in AWS, **the first 4 IP addresses and the last IP address in each subnet CIDR block are not available for you to use, and cannot be assigned to an instances**.
+
+So you will have availble 27 IP Addresses for this case 
+
+`The allowed block size is between a /28 netmask and /16 netmask.`
