@@ -81,6 +81,19 @@ To get temporary security credentials, the identity broker application calls eit
 
 ![alt ](images/identity_auth_Non_Saml.diagram.png)
 
+
+### SQS VS AMAZON MQ
+
+Amazon MQ, Amazon SQS, and Amazon SNS are messaging services that are suitable for anyone from startups to enterprises. If you're using messaging with existing applications and want to move your messaging service to the cloud quickly and easily, it is recommended that you consider Amazon MQ. It supports industry-standard APIs and protocols so you can switch from any standards-based message broker to Amazon MQ without rewriting the messaging code in your applications.
+
+>Amazon MQ is suitable for enterprise IT pros, developers, and architects who are managing a message broker themselves–whether on-premises or in the cloud–and want to move to a fully managed cloud service without rewriting the messaging code in their applications.
+
+
+
+
+
+
+
 ### TO READ/REVISE
 What functions can be performed on keys.
 How is DynamoDB performance and sacalibility provided.
@@ -103,6 +116,10 @@ ENhanced RDS monitoring
  Lambda function is storing sensitive database and API credentials,
  Which Amazon Services are fully managed
  Red Shift Query Queues
+ LONG POLLING V SHORT POLLING
+ SCALING Policies
+  CloudFormation COMPONENT AND termS
+  
 
 https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingEncryption.html
 

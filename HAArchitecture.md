@@ -105,7 +105,6 @@ The following flow diagram illustrates how the default termination policy works:
   Ec2 instance behind LB
   Update Route53 to
 
-
 ## DR Scenarios
 
 ### Pilot Light

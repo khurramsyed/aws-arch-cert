@@ -155,6 +155,36 @@ To calculate the total number of IP addresses of a given CIDR Block, you simply 
 
 The answer to Step #2 is the total number of IP addresses available in the given CIDR netmask. Don't forget that in AWS, **the first 4 IP addresses and the last IP address in each subnet CIDR block are not available for you to use, and cannot be assigned to an instances**.
 
-So you will have availble 27 IP Addresses for this case 
+So you will have availble 27 IP Addresses for this case
 
 `The allowed block size is between a /28 netmask and /16 netmask.`
+
+
+
+## VPC Endpoints
+- A VPC endpoint enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by AWS PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection.
+
+- Endpoints are virtual devices. They are horizontally scaled, redundant, and highly available VPC components. They allow communication between instances in your VPC and services without imposing availability risks or bandwidth constraints on your network traffic.
+
+### There are two types of VPC endpoints:
+
+  - interface endpoints and
+  - gateway endpoints.
+Create the type of VPC endpoint required by the supported service.
+
+- Interface Endpoints (Powered by AWS PrivateLink)
+
+
+#### Internface Endpoint
+An interface endpoint is an elastic network interface with a private IP address from the IP address range of your subnet that serves as an entry point for traffic destined to a supported service
+
+
+most AWS services use VPC Interface Endpoint except for S3 and DynamoDB, which use VPC Gateway Endpoint.
+
+#### Gateway Endpoint
+A gateway endpoint is a gateway that you specify as a target for a route in your route table for traffic destined to a supported AWS service. The following AWS services are supported:
+
+- Amazon S3
+- DynamoDB
+
+![alt](images/vpc-endpoint-s3-diagram.png)

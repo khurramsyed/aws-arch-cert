@@ -2,9 +2,9 @@
 
 ## AWS Compute
 
-Compute comprises of 
+Compute comprises of
 
-- EC2 
+- EC2
 - EC2 Container Services
 - Elastic Beanstalk
 - Lambda
@@ -19,11 +19,11 @@ Compute comprises of
 EC2 Container Services - Docker containers at scale.
 
 
-## ELastic Beanstalk 
+## ELastic Beanstalk
 
 ELastic Beanstalk is a for developers who don't understand AWS , So these developer will just upload the application and Elastic Beanstalk will do auto provisioning, autoscaling and creating EC2 instanaces.
 
-## Lambda 
+## Lambda
 Lambda is code that you upload to cloud and then you control whne it executes , you dont have to worry about any virtual or physical mahcines or operating systems. All you worry about is the code.
 We will use lamabda , architect and dev associate courese. Take as much notes as you can into text editor , we will upload to website and these notes will then turn it into audio and then you can download it and listen to it. We will also learn how to turn that audio into something that alexa can read those notes to you. So you can invoke your own alex school, so alexa can help you with your sutdies.
 
@@ -35,7 +35,7 @@ Batch is used for batch computing in the cloud , however not convered in any of 
 
 
 
-# AWS Storage 
+# AWS Storage
 
 ## S3 - is the oldest storage service, we have something called bucket ,you upload files in buckets. Object based storage.
 ## EFS - Electronic file systems , which is NAS , so you can store file on EFS storage and mount on different machine.
@@ -46,7 +46,7 @@ Batch is used for batch computing in the cloud , however not convered in any of 
 
 ## Databases
 
-RDS : 
+RDS :
 Ralational Databases Service , includling mySQL, PogresSQl , amazon version of database called aurora which is compatible with mySQL as well.	, any RDBMS will sit like Oracel, SQL Server.
 
 DynamoDB :
@@ -90,11 +90,24 @@ Route 53:
 is Amazon DNS
 
 API Gateway:
-Very important 
+Very important
 
 Direct Connect:
 is very big for Arch exam. way of running a dedicated line from office to AWS and into VPC.
 
+### CloudFront (Signed URL Vs Signed cookies)
+
+CloudFront signed URLs and signed cookies provide the same basic functionality: they allow you to control who can access your content. If you want to serve private content through CloudFront and you're trying to decide whether to use signed URLs or signed cookies, consider the following:
+
+**Use signed URLs for the following cases:**
+
+- You want to use an RTMP distribution. Signed cookies aren't supported for RTMP distributions.
+- You want to restrict access to individual files, for example, an installation download for your application.
+- Your users are using a client (for example, a custom HTTP client) that doesn't support cookies.
+
+**Use signed cookies for the following cases:**
+- You want to provide access to multiple restricted files, for example, all of the files for a video in HLS format or all of the files in the subscribers' area of a website.
+- You don't want to change your current URLs.
 
 
 ## Developer Tool
@@ -126,7 +139,7 @@ Cloud watch - Most important, Monitoring service , bread and butter of sys ops.
 Cloud Formation:
 Very importatnt to work as solutions architect as well as for professional exam. Getting rid of physical servers etc  and turn your infrstructure to code.
 
-Cloud Trail : 
+Cloud Trail :
 Anything you do inside AWS that triggers API and creates a log of it. so you need enable it for all the time.
 
 AWS config:
@@ -134,6 +147,3 @@ Monitors config of AWS evironement for all the time. You can backward and forwar
 
 Ops Work:
 Elastic bean , uses chef and puppet. 	
-
-
-
