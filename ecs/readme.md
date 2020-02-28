@@ -17,4 +17,4 @@ Secrets can be exposed to a container in the following ways:
 
 ![alt](../images/ecs-secrets.png)
 
-Within your container definition, specify `<span style="color: red;">secrets</span>` with the name of the environment variable to set in the container and the full ARN of either the Secrets Manager secret or Systems Manager Parameter Store parameter containing the sensitive data to present to the container. The parameter that you reference can be from a different Region than the container using it, but must be from within the same account.
+Within your container definition, specify `secrets` with the name of the environment variable to set in the container and the full ARN of either the Secrets Manager secret or Systems Manager Parameter Store parameter containing the sensitive data to present to the container. The parameter that you reference can be from a different Region than the container using it, but must be from within the same account.
