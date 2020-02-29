@@ -25,6 +25,7 @@
   addresses rather than users IP address , you can use x-forwarded-for header to find users IP.
 
 
+
 # Application Load balancers
 
 ### Target Group
@@ -52,7 +53,7 @@ Amazon EC2 instances available to handle the load for your application
                                                                               --->S3 (Mdeia)
                                                                              |
                                                                 |---> AZ1-->EC2-->RDS
-                                                                |            |
+                                                                |          |
                                                                 |            -->S3 (Mdeia)
                                                                 |
 User --> Route53 --> AWS --> VPC --> ELB --> Auto Scale Group --|
@@ -80,7 +81,22 @@ The following flow diagram illustrates how the default termination policy works:
 
 
 
+## Cross-Zone Load balancing
+If Availability Zones is not properly added to the Elastic load balancer. then Availability Zone will not receive any traffic.
 
+By default, the load balancer routes requests evenly across its Availability Zones. To route requests evenly across the registered instances in the Availability Zones, enable cross-zone load balancing.
+
+
+>You can set up your load balancer in EC2-Classic to distribute incoming requests across EC2 instances in a single Availability Zone or multiple Availability Zones. First, launch EC2 instances in all the Availability Zones that you plan to use. Next, register these instances with your load balancer. Finally, add the Availability Zones to your load balancer. After you add an Availability Zone, the load balancer starts routing requests to the registered instances in that Availability Zone. Note that you can modify the Availability Zones for your load balancer at any time.
+
+
+### ELB Access Logs
+
+Elastic Load Balancing provides access logs that capture detailed information about requests sent to your load balancer. Each log contains information such as the time the request was received, the client's IP address, latencies, request paths, and server responses. You can use these access logs to analyze traffic patterns and troubleshoot issues.
+
+Access logging is an optional feature of Elastic Load Balancing that is disabled by default. After you enable access logging for your load balancer, Elastic Load Balancing captures the logs and stores them in the Amazon S3 bucket that you specify as compressed files. You can disable access logging at any time.
+
+http://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.htmls
 
 # Example HA Architecture
 
@@ -134,7 +150,11 @@ However, you can optionally configure the Auto Scaling group to use Elastic Load
 ![alt](images/asgs-and-healthchecks.png)
 
 
+
+
+
 References:
+
 
 https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-healthchecks.html
 
@@ -153,3 +173,19 @@ https://tutorialsdojo.com/aws-cheat-sheet-ec2-instance-health-check-vs-elb-healt
 Here is an additional training material on why an Amazon EC2 Auto Scaling group terminates a healthy instance:
 
 https://youtu.be/_ew-J3DQKZg
+
+
+### Elastic Load Balancing
+
+- A load balancer accepts incoming traffic from clients and routes requests to its registered targets (such as EC2 instances) in one or more Availability Zones
+
+- When the load balancer detects an unhealthy target, it stops routing traffic to that target. It then resumes routing traffic to that target when it detects that the target is healthy again
+
+- With Application Load Balancers and Network Load Balancers, you register targets in target groups, and route traffic to the target groups.
+
+- With Classic Load Balancers, you register instances with the load balancer.
+
+### Cross Zone Load Balancing
+
+- The nodes for your load balancer distribute requests from clients to registered targets. When cross-zone load balancing is enabled, each load balancer node distributes traffic across the registered targets in all enabled Availability Zones. 
+- When cross-zone load balancing is disabled, each load balancer node distributes traffic only across the registered targets in its Availability Zone.

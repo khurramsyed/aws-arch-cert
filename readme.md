@@ -118,8 +118,11 @@ ENhanced RDS monitoring
  Red Shift Query Queues
  LONG POLLING V SHORT POLLING
  SCALING Policies
-  CloudFormation COMPONENT AND termS
-  
+CloudFormation COMPONENT AND termS
+VPC Endpoint
+Interface Endpoint
+
+
 
 https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingEncryption.html
 

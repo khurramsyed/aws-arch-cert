@@ -175,7 +175,7 @@ Create the type of VPC endpoint required by the supported service.
 - Interface Endpoints (Powered by AWS PrivateLink)
 
 
-#### Internface Endpoint
+#### Interface Endpoint
 An interface endpoint is an elastic network interface with a private IP address from the IP address range of your subnet that serves as an entry point for traffic destined to a supported service
 
 
@@ -187,4 +187,39 @@ A gateway endpoint is a gateway that you specify as a target for a route in your
 - Amazon S3
 - DynamoDB
 
-![alt](images/vpc-endpoint-s3-diagram.png)
+![alt](images/vpc-endpoint-s3-diagram.png
+
+## AWS Direct Connect
+Direct Connect links users' on-premises environments to AWS.
+
+
+
+### Connection to On-Premises Data Centers
+
+You can use the following types of connections for a connection between an interface endpoint and your on-premises data center:
+
+- AWS Direct Connect
+- AWS Site-to-Site VPN
+
+### AWS Direct Connect
+AWS Direct Connect is a cloud service solution that makes it easy to establish a dedicated network connection from your premises to AWS. Using AWS Direct Connect, you can establish private connectivity between AWS and your datacenter, office, or colocation environment, which in many cases can reduce your network costs, increase bandwidth throughput, and provide a more consistent network experience than Internet-based connections.
+
+- AWS Direct Connect lets you establish a dedicated network connection between your network and one of the AWS Direct Connect locations. Using industry standard 802.1q VLANs, this dedicated connection can be partitioned into multiple virtual interfaces.
+
+
+![alt](images/aws-dir-con.png)
+
+
+
+## AWS Direct Connect  V VPN
+
+Using AWS Direct Connect, data that would have previously been transported over the Internet can now be delivered through a private network connection between AWS and your datacenter or corporate network.
+
+- In many circumstances, private network connections can reduce costs, increase bandwidth, and provide a more consistent network experience than Internet-based connections.
+
+
+
+![alt](aws-vpn.png)
+vpn
+![alt](images/direct_connect_overview.png)
+Direct Connect
