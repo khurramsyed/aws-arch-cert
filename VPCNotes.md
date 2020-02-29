@@ -174,7 +174,7 @@ Create the type of VPC endpoint required by the supported service.
 
 - Interface Endpoints (Powered by AWS PrivateLink)
 
-
+s
 #### Interface Endpoint
 An interface endpoint is an elastic network interface with a private IP address from the IP address range of your subnet that serves as an entry point for traffic destined to a supported service
 

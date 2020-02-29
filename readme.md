@@ -121,6 +121,12 @@ ENhanced RDS monitoring
 CloudFormation COMPONENT AND termS
 VPC Endpoint
 Interface Endpoint
+NAT Gateway and NAT Instance configuration
+EC2 Enhanced Networking
+Placement Group (Insufficient capacity)
+Blue green , CAnary , In place release
+RDP Port 3389
+
 
 
 
