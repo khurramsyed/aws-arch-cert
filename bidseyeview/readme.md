@@ -95,6 +95,12 @@ Very important
 Direct Connect:
 is very big for Arch exam. way of running a dedicated line from office to AWS and into VPC.
 
+
+Perfect Forward Secrecy is a feature that provides additional safeguards against the eavesdropping of encrypted data, through the use of a unique random session key. This prevents the decoding of captured data, even if the secret long-term key is compromised.
+
+CloudFront and Elastic Load Balancing are the two AWS services that support Perfect Forward Secrecy.
+
+
 ### CloudFront (Signed URL Vs Signed cookies)
 
 CloudFront signed URLs and signed cookies provide the same basic functionality: they allow you to control who can access your content. If you want to serve private content through CloudFront and you're trying to decide whether to use signed URLs or signed cookies, consider the following:

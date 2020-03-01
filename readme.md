@@ -96,16 +96,14 @@ Amazon MQ, Amazon SQS, and Amazon SNS are messaging services that are suitable f
 
 ### TO READ/REVISE
 What functions can be performed on keys.
+AWS Budget Cost Explorer and Cost allocation tags
 How is DynamoDB performance and sacalibility provided.
-Which of the following are valid S3 data encryption options? [Select 4]
-S3 Disk Types and performance
-S3 Pricing
-S3 Srorage classes
+S3 Summary
+
 Structrue of Cloud Formantion Template
-WHich IP Address AWS reserves in a VPC
 Dynamo DB Partitioning
 When using EC2 instances with Dedicated Hosting, which of the following modes are you able to transition between by stopping the instance and starting it again?
-Amazon Stoarge Gateway
+
 EBS Cycle Policy
 EC2 Scaling cool down and warm up period
 shared responsibility model
@@ -119,15 +117,28 @@ ENhanced RDS monitoring
  LONG POLLING V SHORT POLLING
  SCALING Policies
 CloudFormation COMPONENT AND termS
+Cloud Formation Template vs Stack
 VPC Endpoint
 Interface Endpoint
 NAT Gateway and NAT Instance configuration
+EMR ,Neptune , Athena are these serverless?
+How to monitor memory in cloud watch
 EC2 Enhanced Networking
-Placement Group (Insufficient capacity)
+Placement Group (Insufficient capacity
+Amazon Stoarge Gateway
+
+You have triggered the creation of a snapshot of your EBS volume attached to an Instance Store-backed EC2 Instance and is currently on-going. At this point, what are the things that the EBS volume can or cannot do
+
 Blue green , CAnary , In place release
 RDP Port 3389
+Cloud HSM v KMS
+AWS Security Token Service  
+EMR vs Glue V Athena
+Launch configurations and ASG
+Ealsticache Redis Multi Az and
 
-
+S3 V EBS v EFS (use cases atleast)
+IAM Policy vs bucket policies
 
 
 https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingEncryption.html

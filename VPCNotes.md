@@ -223,3 +223,15 @@ Using AWS Direct Connect, data that would have previously been transported over 
 vpn
 ![alt](images/direct_connect_overview.png)
 Direct Connect
+
+### Services Providing encryption
+
+All data transferred between any type of gateway appliance and AWS storage is encrypted using SSL. By default, all data stored by AWS Storage Gateway in S3 is encrypted server-side with Amazon S3-Managed Encryption Keys (SSE-S3). Also, when using the file gateway, you can optionally configure each file share to have your objects encrypted with AWS KMS-Managed Keys using SSE-KMS. This is the reason why Option 1 is correct.
+
+![alt](images/aws-storage-gateway-cached-diagram.png)
+
+
+
+
+
+Data stored in Amazon Glacier is protected by default; only vault owners have access to the Amazon Glacier resources they create. Amazon Glacier encrypts your data at rest by default and supports secure data transit with SSL. This is the reason why Option 4 is correct.

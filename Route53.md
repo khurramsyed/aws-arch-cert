@@ -33,4 +33,20 @@ In active-active failover, all the records that have the same name, the same typ
 
 Use an active-passive failover configuration when you want a primary resource or group of resources to be available the majority of the time and you want a secondary resource or group of resources to be on standby in case all the primary resources become unavailable. When responding to queries, Route 53 includes only the healthy primary resources. If all the primary resources are unhealthy, Route 53 begins to include only the healthy secondary resources in response to DNS queries.
 
+### Route 53 Supported Record Types
+Amazon Route 53 currently supports the following DNS record types:
+
+- A (address record)
+- AAAA (IPv6 address record)
+- CNAME (canonical name record)
+- CAA (certification authority authorization)
+- MX (mail exchange record)
+- NAPTR (name authority pointer record)
+- NS (name server record)
+- PTR (pointer record)
+- SOA (start of authority record)
+- SPF (sender policy framework)
+- SRV (service locator)
+- TXT (text record)
+
 ## What is the difference between a Domain and a Hosted Zone?
