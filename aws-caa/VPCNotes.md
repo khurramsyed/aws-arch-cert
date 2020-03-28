@@ -68,13 +68,13 @@ In a VPC an instance does not retain its private IP address.
 
 Amazon VPC offers you the flexibility to fully manage both sides of your Amazon VPC connectivity by creating a VPN connection between your remote network and a software VPN appliance running in your Amazon VPC network. This option is recommended if you must manage both ends of the VPN connection either for compliance purposes or for leveraging gateway devices that are not currently supported by Amazon VPC’s VPN solution.
 
-|![alt AWS VPN](aws-vpn.png)|
+|![alt AWS VPN](./images/aws-vpn.png)|
 |  :--------------|
 
 
 | Use this to Explain VPN and VPC    |
 | :------------- |
-| ![alt AWS VPN](aws-vpn-Exp.png)       |
+| ![alt AWS VPN](a./images/ws-vpn-Exp.png)       |
 
 You can create an `IPsec VPN connection` between your `VPC` and your remote network. On the AWS side of the VPN connection, a `virtual private gateway` provides `two VPN endpoints (tunnels) for automatic failover`. You configure your `customer gateway on the remote side` of the VPN connection. If you have more than one remote network (for example, multiple branch offices), you can create multiple AWS managed VPN connections via your `virtual private gateway` to enable communication between these networks.
 
@@ -103,7 +103,7 @@ Edge to Edge Routing Through a Gateway or Private Connection
 If either VPC in a peering relationship has one of the following connections, you cannot extend the peering relationship to that connection:
 
 
-| ![](edge-to-edge-vpn-diagram.png)     |
+| ![](./images/edge-to-edge-vpn-diagram.png)     |
 | :------------- |
 | Edge to edge VPN peering is not allowed |
 
@@ -187,7 +187,7 @@ A gateway endpoint is a gateway that you specify as a target for a route in your
 - Amazon S3
 - DynamoDB
 
-![alt](images/vpc-endpoint-s3-diagram.png
+![alt](images/vpc-endpoint-s3-diagram.png)
 
 ## AWS Direct Connect
 Direct Connect links users' on-premises environments to AWS.
@@ -219,7 +219,7 @@ Using AWS Direct Connect, data that would have previously been transported over 
 
 
 
-![alt](aws-vpn.png)
+![alt](./images/aws-vpn.png)
 vpn
 ![alt](images/direct_connect_overview.png)
 Direct Connect

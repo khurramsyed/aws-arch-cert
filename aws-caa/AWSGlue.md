@@ -14,21 +14,21 @@
 ## Use Cases
 
 - Queries Against an Amazon S3 Data Lake
-| ![alt Glue Querying S3](GlueS3.png)|
+| ![alt Glue Querying S3](./images/GlueS3.png)|
 | :------------- |
 | Glue Queries Against S3 Data Lake       |
 
 - Analyze Log Data in Your Data Warehouse
-| ![alt Analyze Log Data in Your Data Warehouse](Glue_Analyze-Log-Data-in-Data-Warehouse.png)|
+| ![alt Analyze Log Data in Your Data Warehouse](./images/Glue_Analyze-Log-Data-in-Data-Warehouse.png)|
 | :------------- |
 | Analyze Log Data in Your Data Warehouse      |
 
 - Unified View of Your Data Across Multiple Data Stores
-| ![alt Unified View of Your Data Across Multiple Data Stores](Glue_Unified-View-of-Data-Across-Multiple-Data-Store.png)|
+| ![alt Unified View of Your Data Across Multiple Data Stores](./images/Glue_Unified-View-of-Data-Across-Multiple-Data-Store.png)|
 | :------------- |
 | Unified View of Your Data Across Multiple Data Stores  |
 
 - Event-driven ETL Pipelines
-| ![alt Event-driven ETL Pipelines](Event-drivenETLPipelines.png)|
+| ![alt Event-driven ETL Pipelines](./images/Event-drivenETLPipelines.png)|
 | :------------- |
 | Event-driven ETL Pipelines  |

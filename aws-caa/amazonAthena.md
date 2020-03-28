@@ -15,4 +15,4 @@
 - Athena is `out-of-the-box integrated with AWS Glue Data Catalog`, allowing you to create a unified metadata repository across various services, crawl data sources to discover schemas and populate your Catalog with new and modified table and partition definitions, and maintain schema versioning.
 - You can also use `Glue’s fully-managed ETL` capabilities to transform data or convert it into columnar formats to optimize cost and improve performance.
 
-![alt text](Analytics-and-Query-Services.jpg "Auto Scaling")
+![alt text](./images/Analytics-and-Query-Services.jpg "Auto Scaling")
