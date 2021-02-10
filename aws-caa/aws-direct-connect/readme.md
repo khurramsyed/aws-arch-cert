@@ -3,7 +3,7 @@
 
 One end of the cable is connected to your router, the other to an AWS Direct Connect router. With this connection, you can create virtual interfaces directly to public AWS services (for example, to Amazon S3) or to Amazon VPC, bypassing internet service providers in your network path. An AWS Direct Connect location provides access to AWS in the Region with which it is associated.
 
-![alt](images/direct_connect_overview.png)
+![alt](../images/direct_connect_overview.png)
 
 ### AWS Direct Connect Components
 
