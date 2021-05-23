@@ -1,14 +1,19 @@
 # VPC
 Amazon `Virtual Private Cloud (Amazon VPC)` lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.
 
-`A VPC` spans all availability zones within a region.
+- `A VPC` spans all availability zones within a region.  
+- Each subnet must reside `entirely within on Availability Zone`
 
-You have `complete control over your virtual networking environment`, including selection of your own `IP address range`, `creation of subnets`, and configuration of `route tables` and `network gateways`. You can use both IPv4 and IPv6 in your VPC for secure and easy access to resources and applications.
+You have `complete control over your virtual networking environment`, including:
+- Selection of your own `IP address range`
+- `creation of subnets`
+-  configuration of `route tables` and `network gateways`. 
+
+You can use both IPv4 and IPv6 in your VPC for secure and easy access to resources and applications.
 
 ### Route Table
+
 `Route Table` contains a set of rules called routes that are used to Determine where the network traffic is routed.
-
-
 
 - To Create a private subnet we need to create a route table that is not connected to internet gateway.
 - [Good Video on Subnets and how to make a subnet private/public](https://www.youtube.com/watch?v=KNT463WSjjY&t=49s)
